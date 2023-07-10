@@ -6,14 +6,16 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
+      name: 'name',
+      title: 'Category Name',
       type: 'string',
+      validation:(Rule:any)=>Rule.required()
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'text',
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      validation:Rule=>Rule.required()
     }),
   ],
 })
